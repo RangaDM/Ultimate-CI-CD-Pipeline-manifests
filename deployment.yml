@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: salary-calculator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: salary-calculator
+  template:
+    metadata:
+      labels:
+        app: salary-calculator
+    spec:
+      containers:
+        - name: salary-calculator
+          image: rangadm/salary_calculator:latest
+          ports:
+            - containerPort: 80
