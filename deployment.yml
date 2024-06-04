@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: salary-calculator
-          image: rangadm/salary_calculator:7
+          image: rangadm/salary_calculator:10
           ports:
             - containerPort: 80
